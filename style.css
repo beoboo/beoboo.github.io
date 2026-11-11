@@ -273,10 +273,11 @@ p {
 /* Two-column "editorial" layout: heading left, content right (desktop) */
 .section-grid {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);   /* never wider than the screen, whatever the longest word */
   gap: 2rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
   .section-grid {
     grid-template-columns: 13rem minmax(0, 1fr);
     gap: 4rem;
@@ -691,6 +692,7 @@ p {
 }
 
 .timeline-points {
+  overflow-wrap: anywhere;   /* "Rust/WebAssembly/OpenGL-based" breaks on the narrowest screens */
   margin-top: .75rem;
   padding-left: 1.1rem;
   color: var(--text-muted);
@@ -1272,5 +1274,25 @@ p {
   .contact-links a[href^="mailto"]::after {
     content: " (" attr(href) ")";
     font-size: .8em;
+  }
+
+  /* On paper, say where each project lives */
+  .project-title a::after {
+    content: " (" attr(href) ")";
+    position: static;
+    font: 400 .75rem var(--font-sans);
+    color: var(--text-muted);
+  }
+
+  .repo-list a::after {
+    content: attr(href);
+    display: block;
+    margin-top: .25rem;
+    font-size: .75rem;
+    color: var(--text-muted);
+  }
+
+  .footer-top {
+    display: none;
   }
 }
