@@ -507,15 +507,6 @@ p {
   color: var(--text);
 }
 
-.hero-download {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  margin-top: 1.5rem;
-  font-size: .95rem;
-  font-weight: 500;
-}
-
 /* Round portrait with a halftone dot accent behind it */
 .portrait {
   position: relative;
