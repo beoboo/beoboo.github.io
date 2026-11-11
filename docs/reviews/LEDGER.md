@@ -13,13 +13,13 @@ not raised twice.
 ## Open
 | ID | P | Lens | Where | Finding | Since |
 |----|---|------|-------|---------|-------|
-| CR-001 | P1 | E·F·G | git history | Follow-up: at the next push, rewrite history so no commit holds the removed CV PDF or the email address (removed from the page on 2026-11-11 for the same reason), then force-push `main` with its own confirmation — the user chose both | 2026-11-11 |
 | CR-040 | P3 | G | index.html:56-58 | Self-host the two Google Fonts woff2 files (and preload the serif) to drop a font origin from first paint; the avatar part is done | 2026-11-11 |
 
 ## Done
 | ID | P | Lens | Where | Finding | Fixed |
 |----|---|------|-------|---------|-------|
 | CR-001 | P1 | E·F·G | index.html, docs/ | The CV download published private details (removed, PDF deleted) | 2026-11-11 |
+| CR-001 | P1 | E·F·G | git history | Follow-up: history rewritten so no commit holds the CV PDF or the email, force-pushed (main f1b4071 → 36136e8). GitHub may still serve the old commit by its exact hash until its own garbage collection; GitHub Support can purge it | 2026-11-11 |
 | CR-002 | P1 | D·F | style.css | Nav clipped below 352 px; focus rings clipped | 2026-11-11 |
 | CR-003 | P1 | F | style.css | Nav contrast under the translucent header | 2026-11-11 |
 | CR-004 | P1 | E | index.html | munote overstated as behaviour-first | 2026-11-11 |
