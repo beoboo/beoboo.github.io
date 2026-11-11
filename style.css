@@ -596,7 +596,7 @@ p {
 }
 
 .portrait-frame img {
-  image-rendering: pixelated;   /* a 48 px pixel avatar scaled up in crisp blocks */
+  transform: scale(1.1);   /* trims the picture's own round frame, so only the site's ring shows */
 }
 
 .portrait-frame img,
