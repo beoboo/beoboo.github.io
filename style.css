@@ -1139,19 +1139,6 @@ p {
   height: 85%;
 }
 
-/* Wood grain with knots and a board seam */
-.thumb-wood {
-  background:
-    linear-gradient(90deg, transparent 57.6%, rgba(40, 20, 8, .45) 57.6% 58%, transparent 58%),
-    radial-gradient(ellipse 46px 16px at 72% 40%, rgba(62, 32, 14, .55), rgba(62, 32, 14, .15) 55%, transparent 72%),
-    radial-gradient(ellipse 30px 10px at 24% 72%, rgba(62, 32, 14, .45), transparent 70%),
-    repeating-linear-gradient(176deg,
-      rgba(255, 236, 210, .10) 0 3px,
-      transparent 3px 9px,
-      rgba(70, 36, 14, .18) 9px 11px,
-      transparent 11px 19px),
-    linear-gradient(135deg, #b37a4c, #8f5a33 55%, #7a4a29);
-}
 
 
 /* 10. Patent callout
