@@ -1,0 +1,7 @@
+# The site is one page. Keep crawlers out of the review notes and tooling,
+# which GitHub Pages also serves from this repository.
+User-agent: *
+Disallow: /.claude/
+Disallow: /docs/reviews/
+
+Sitemap: https://beoboo.github.io/sitemap.xml
