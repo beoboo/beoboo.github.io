@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <clipPath id="face"><circle cx="300" cy="315" r="176"/></clipPath>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5aa8ff"/><stop offset="1" stop-color="#ff8a4c"/></linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5aa8ff"/><stop offset="1" stop-color="#ff8a4c"/></linearGradient>
+    <radialGradient id="glowBlue" cx="0.08" cy="0" r="0.7"><stop offset="0" stop-color="#5aa8ff" stop-opacity=".22"/><stop offset="1" stop-color="#5aa8ff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowOrange" cx="0.95" cy="0.85" r="0.6"><stop offset="0" stop-color="#ff8a4c" stop-opacity=".16"/><stop offset="1" stop-color="#ff8a4c" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2.2" fill="#5aa8ff" opacity=".4"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0b1120"/>
+  <rect width="1200" height="630" fill="url(#glowBlue)"/>
+  <rect width="1200" height="630" fill="url(#glowOrange)"/>
+  <rect x="0" y="0" width="1200" height="10" fill="url(#grad)"/>
+  <rect x="214" y="229" width="300" height="300" rx="18" fill="url(#dots)"/>
+  <circle cx="300" cy="315" r="192" fill="url(#ring)"/>
+  <circle cx="300" cy="315" r="188" fill="#0b1120"/>
+  <image href="https://avatars.githubusercontent.com/u/210002?v=4" xlink:href="https://avatars.githubusercontent.com/u/210002?v=4" x="124" y="139" width="352" height="352" clip-path="url(#face)" preserveAspectRatio="xMidYMid slice"/>
+  <text x="560" y="228" font-family="Inter, Helvetica, Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="3" fill="#5aa8ff">CAGLIARI, ITALY</text>
+  <text x="556" y="320" font-family="'DM Serif Display', Georgia, serif" font-size="88" fill="#e8edf6">Pietro Atzeni</text>
+  <text x="560" y="380" font-family="Inter, Helvetica, Arial, sans-serif" font-size="34" font-weight="600" fill="url(#grad)">Senior Software Engineer &amp; Architect</text>
+  <text x="560" y="436" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26" fill="#9ba9c2">Rust · C/C++ · Distributed real-time systems</text>
+  <text x="560" y="474" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26" fill="#9ba9c2">20+ years in gaming, fintech and telecoms</text>
+  <text x="560" y="548" font-family="ui-monospace, Menlo, monospace" font-size="24" fill="#ff8a4c">beoboo.github.io</text>
+</svg>
