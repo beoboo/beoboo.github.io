@@ -595,6 +595,10 @@ p {
     var(--shadow-md);
 }
 
+.portrait-frame img {
+  image-rendering: pixelated;   /* a 48 px pixel avatar scaled up in crisp blocks */
+}
+
 .portrait-frame img,
 .project-thumb img {
   width: 100%;
