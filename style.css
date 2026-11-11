@@ -1,6 +1,6 @@
 /* ==========================================================================
    Pietro Atzeni: CV & Portfolio
-   Vanilla CSS · mobile-first · automatic light & dark themes
+   Vanilla CSS · mobile-first · one dark theme, orange and blue accents
    --------------------------------------------------------------------------
    1. Design tokens        7. Experience & education (timeline)
    2. Reset & base         8. Skills
@@ -14,19 +14,22 @@
 /* 1. Design tokens
    ========================================================================== */
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 
-  /* Palette: warm paper, ink and a terracotta accent */
-  --bg:              #faf8f5;
-  --surface:         #ffffff;
-  --surface-2:       #f3efe9;
-  --text:            #1d1f23;
-  --text-muted:      #5d636d;
-  --line:            #e4ded5;
-  --accent:          #a8492a;
-  --accent-hover:    #8e3b20;
-  --accent-soft:     #f6e7e0;
-  --accent-contrast: #ffffff;
+  /* Palette: deep navy; orange for action, blue for structure */
+  --bg:              #0b1120;
+  --surface:         #121a2d;
+  --surface-2:       #0f1729;   /* the tinted Projects section */
+  --text:            #e8edf6;
+  --text-muted:      #9ba9c2;
+  --line:            #22304d;
+  --accent:          #ff8a4c;   /* orange: links, buttons, calls to action */
+  --accent-hover:    #ffa877;
+  --accent-soft:     #2d2226;
+  --accent-contrast: #1b0d04;
+  --blue:            #5aa8ff;   /* blue: section numbers, labels, employers, core skills */
+  --blue-soft:       #192c48;
+  --gradient:        linear-gradient(100deg, var(--blue), var(--accent));
 
   /* Typography */
   --font-sans:  "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -42,26 +45,9 @@
   --radius-sm:     8px;
 
   /* Depth & motion */
-  --shadow-sm: 0 1px 2px rgba(29, 31, 35, .06);
-  --shadow-md: 0 14px 32px -14px rgba(29, 31, 35, .22);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .45);
+  --shadow-md: 0 18px 40px -18px rgba(0, 0, 0, .75);
   --ease:      cubic-bezier(.2, .7, .2, 1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:              #131417;
-    --surface:         #1d1f23;
-    --surface-2:       #17181b;
-    --text:            #ece9e4;
-    --text-muted:      #a3a7ae;
-    --line:            #2e3137;
-    --accent:          #e08a68;
-    --accent-hover:    #eca487;
-    --accent-soft:     #3a2a24;
-    --accent-contrast: #1a0f0b;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
-    --shadow-md: 0 16px 36px -14px rgba(0, 0, 0, .65);
-  }
 }
 
 
@@ -114,7 +100,7 @@ svg {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--blue);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -212,7 +198,7 @@ p {
 .section-index,
 .project-cat,
 .callout-label {
-  color: var(--accent);
+  color: var(--blue);
 }
 
 /* Small rounded tags (projects, education) */
@@ -308,7 +294,7 @@ p {
   height: 1px;
   margin-left: .6rem;
   vertical-align: middle;
-  background: currentColor;
+  background: var(--gradient);
 }
 
 .section-head h2 {
@@ -371,7 +357,7 @@ p {
   width: 2.1rem;
   height: 2.1rem;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--gradient);
   color: var(--accent-contrast);
   font-family: var(--font-serif);
   font-size: 1.15rem;
@@ -413,8 +399,9 @@ p {
   left: 0;
   right: 0;
   bottom: .15rem;
-  height: 1px;
-  background: var(--accent);
+  height: 2px;
+  border-radius: 1px;
+  background: var(--gradient);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform .25s var(--ease);
@@ -459,6 +446,10 @@ p {
 .hero {
   padding-block: clamp(3rem, 8vw, 6.5rem) clamp(3.5rem, 8vw, 6rem);
   border-bottom: 1px solid var(--line);
+  /* two soft glows: blue behind the name, orange behind the portrait */
+  background:
+    radial-gradient(42rem 30rem at 8% -10%, rgba(90, 168, 255, .16), transparent 70%),
+    radial-gradient(36rem 28rem at 92% 40%, rgba(255, 138, 76, .13), transparent 70%);
 }
 
 .hero-grid {
@@ -487,7 +478,18 @@ p {
 .hero-role {
   margin-top: .75rem;
   font-size: clamp(1.15rem, 2.4vw, 1.5rem);
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--blue);        /* fallback where text gradients are unsupported */
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .hero-role {
+    width: fit-content;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 .hero-lede {
@@ -544,10 +546,10 @@ p {
 }
 
 .btn-ghost:hover {
-  border-color: var(--text);
+  border-color: var(--blue);
 }
 
-/* Round portrait with a halftone dot accent behind it */
+/* Round portrait in a blue-to-orange ring, with a halftone dot accent behind it */
 .portrait {
   position: relative;
   width: clamp(7rem, 26vw, 17rem);
@@ -559,22 +561,29 @@ p {
   position: absolute;
   inset: 22% -16% -16% 22%;
   border-radius: var(--radius);
-  background: radial-gradient(var(--accent) 1.6px, transparent 2px) 0 0 / 14px 14px;
-  opacity: .45;
+  background: radial-gradient(var(--blue) 1.6px, transparent 2px) 0 0 / 14px 14px;
+  opacity: .35;
+}
+
+.portrait::after {            /* the ring: shows 3px past the frame's dark gap */
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--accent));
 }
 
 .portrait-frame {
   position: absolute;
   inset: 0;
+  z-index: 1;
   display: grid;
   place-items: center;
   overflow: hidden;
   border-radius: 50%;
-  background: linear-gradient(145deg, var(--surface), var(--accent-soft));
+  background: var(--surface);
   box-shadow:
-    0 0 0 1px var(--line),
-    0 0 0 10px var(--bg),
-    0 0 0 11px var(--line),
+    0 0 0 6px var(--bg),
     var(--shadow-md);
 }
 
@@ -675,8 +684,9 @@ p {
 }
 
 .timeline-item.is-current::before {
-  background: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-soft);
+  border-color: transparent;
+  background: var(--gradient);
+  box-shadow: 0 0 0 4px var(--blue-soft);
 }
 
 .timeline-date {
@@ -695,7 +705,7 @@ p {
   font-size: 1.0625rem;
   font-weight: 500;
   line-height: 1.5;
-  color: var(--accent);
+  color: var(--blue);
 }
 
 .timeline-desc {
@@ -775,9 +785,9 @@ p {
 
 .pill--strong {
   font-weight: 600;          /* a cue beyond colour */
-  border-color: transparent;
-  background: var(--accent-soft);
-  color: var(--accent-hover);
+  border-color: color-mix(in srgb, var(--blue) 35%, transparent);
+  background: var(--blue-soft);
+  color: var(--blue);
 }
 
 @media (min-width: 640px) {
@@ -815,7 +825,7 @@ p {
   content: "";
   flex: 1;
   height: 1px;
-  background: var(--line);
+  background: linear-gradient(90deg, var(--line), transparent);
 }
 
 .project-grid + .group-title,
@@ -873,10 +883,11 @@ p {
   place-items: center;
   width: 2.5rem;
   height: 2.5rem;
+  border: 1px solid var(--line);
   border-radius: 50%;
-  background: #ffffff;
-  color: #a8492a;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .18);
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .45);
 }
 
 /* Keep the badge clear of the code on dark editor/terminal thumbnails */
@@ -987,7 +998,7 @@ p {
   font-family: var(--font-mono);
   font-size: .9rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--blue);
 }
 
 .repo-lang {
@@ -1019,13 +1030,13 @@ p {
 .thumb-code {
   --code-gutter: 2.6rem;
   background:
-    linear-gradient(90deg, #1f1e23 0 var(--code-gutter), transparent var(--code-gutter)),
-    #17161a;
+    linear-gradient(90deg, #0f1728 0 var(--code-gutter), transparent var(--code-gutter)),
+    #0b1222;
 }
 
 /* Terminal (graybox) */
 .thumb-terminal {
-  background: radial-gradient(120% 90% at 0% 0%, #23252d, #131418 70%);
+  background: radial-gradient(120% 90% at 0% 0%, #18233c, #090e1a 70%);
 }
 
 .code-art {
@@ -1035,7 +1046,7 @@ p {
   overflow: hidden;
   font: 500 .8rem/1.75 var(--font-mono);
   white-space: pre;
-  color: #d9d4cc;
+  color: #d6deec;
   counter-reset: line;
 }
 
@@ -1055,56 +1066,56 @@ p {
   left: 0;
   width: var(--code-gutter);
   text-align: center;
-  color: #5c5a63;
+  color: #3d4b66;
 }
 
-.code-art .k { color: #e08a68; }
-.code-art .f { color: #8fc1a9; }
-.code-art .n { color: #e3c07b; }
-.code-art .p { color: #85818c; }
-.code-art .c { color: #75717d; font-style: italic; }
+.code-art .k { color: #ff9d66; }
+.code-art .f { color: #7fbfff; }
+.code-art .n { color: #ffd08a; }
+.code-art .p { color: #7584a3; }
+.code-art .c { color: #5f6e8c; font-style: italic; }
 
 /* Game controller on a pixel grid (RustNES) */
 .thumb-pixel {
   background:
-    linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px) 0 0 / 8px 8px,
-    linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px) 0 0 / 8px 8px,
-    radial-gradient(circle at 50% 45%, #363949, #1b1c24 72%);
+    linear-gradient(rgba(90, 168, 255, .06) 1px, transparent 1px) 0 0 / 8px 8px,
+    linear-gradient(90deg, rgba(90, 168, 255, .06) 1px, transparent 1px) 0 0 / 8px 8px,
+    radial-gradient(circle at 50% 45%, #1f2c4a, #0a1020 72%);
 }
 
 /* Practice statistics card (Music Practice Tracker) */
 .thumb-chart {
   background:
-    radial-gradient(rgba(168, 73, 42, .12) 1px, transparent 1.5px) 0 0 / 14px 14px,
-    #f3ede4;
+    radial-gradient(rgba(90, 168, 255, .10) 1px, transparent 1.5px) 0 0 / 14px 14px,
+    #0d1628;
 }
 
 /* Music staff (munote) */
 .thumb-staff {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, .6), transparent),
-    #f4f0e6;
+    linear-gradient(180deg, rgba(90, 168, 255, .07), transparent),
+    #0f182b;
 }
 
 /* Stacked invoices (Invox) */
 .thumb-doc {
   background:
-    radial-gradient(rgba(90, 70, 50, .12) 1px, transparent 1.5px) 0 0 / 14px 14px,
-    #ece6dc;
+    radial-gradient(rgba(120, 150, 200, .10) 1px, transparent 1.5px) 0 0 / 14px 14px,
+    #0d1628;
 }
 
 /* Piano keyboard: black keys (top layer) over white keys (bottom layer) */
 .thumb-piano {
   background:
     linear-gradient(90deg,
-      transparent 0 17px,   #1c1b1f 17px 31px,
-      transparent 31px 41px, #1c1b1f 41px 55px,
-      transparent 55px 89px, #1c1b1f 89px 103px,
-      transparent 103px 113px, #1c1b1f 113px 127px,
-      transparent 127px 137px, #1c1b1f 137px 151px,
+      transparent 0 17px,   #0b0f19 17px 31px,
+      transparent 31px 41px, #0b0f19 41px 55px,
+      transparent 55px 89px, #0b0f19 89px 103px,
+      transparent 103px 113px, #0b0f19 113px 127px,
+      transparent 127px 137px, #0b0f19 137px 151px,
       transparent 151px) -36px 0 / 168px 58% repeat-x,
-    linear-gradient(90deg, #f8f5ef 0 23px, #d3ccc0 23px 24px) -36px 0 / 24px 100% repeat-x,
-    #f8f5ef;
+    linear-gradient(90deg, #e4dfd4 0 23px, #a9a397 23px 24px) -36px 0 / 24px 100% repeat-x,
+    #e4dfd4;
 }
 
 .thumb-piano::before {          /* felt strip above the keys */
@@ -1112,23 +1123,23 @@ p {
   position: absolute;
   inset: 0 0 auto;
   height: 10px;
-  background: #7d2f1a;
+  background: #c2552a;
 }
 
 .thumb-piano::after {           /* soft shadow from the fallboard */
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, .28), transparent 22%);
+  background: linear-gradient(180deg, rgba(5, 9, 20, .55), rgba(5, 9, 20, .12) 40%, rgba(5, 9, 20, .25));
 }
 
 /* Sketchbook page with a line-drawn street scene */
 .thumb-sketch {
   background:
-    linear-gradient(rgba(60, 70, 90, .07) 1px, transparent 1px) 0 0 / 22px 22px,
-    linear-gradient(90deg, rgba(60, 70, 90, .07) 1px, transparent 1px) 0 0 / 22px 22px,
-    #f4f0e6;
-  color: #343a46;
+    linear-gradient(rgba(120, 150, 200, .08) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(90deg, rgba(120, 150, 200, .08) 1px, transparent 1px) 0 0 / 22px 22px,
+    #0f182b;
+  color: #b9c5da;
 }
 
 .sketch-art {
@@ -1203,6 +1214,8 @@ p {
     --text: #000;
     --text-muted: #333;
     --line: #ccc;
+    --accent: #b4461a;
+    --blue: #1f5fbf;
   }
 
   .site-header,
