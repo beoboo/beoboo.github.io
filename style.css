@@ -430,6 +430,7 @@ p {
 
   .site-nav {
     flex: 0 1 auto;
+    margin-left: auto;         /* nav and language switch sit together on the right */
   }
 
   .site-nav ul {
@@ -440,6 +441,40 @@ p {
   .site-nav a {
     font-size: .9rem;
   }
+}
+
+/* Language switch: EN · IT, the current page highlighted */
+.lang-switch {
+  flex: none;
+}
+
+.lang-switch ul {
+  display: flex;
+  gap: .15rem;
+  padding: .2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  list-style: none;
+}
+
+.lang-switch a {
+  display: block;
+  padding: .2rem .55rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.lang-switch a:hover {
+  color: var(--text);
+}
+
+.lang-switch a[aria-current="page"] {
+  background: var(--blue-soft);
+  color: var(--blue);
 }
 
 @media (min-width: 720px) {

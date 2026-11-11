@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pietro Atzeni — Senior Software Engineer &amp; Architect</title>
+  <meta name="description" content="Senior software engineer e architect a Cagliari: oltre 20 anni e tre ruoli da CTO tra gaming, fintech e telecomunicazioni. Rust, C/C++, sistemi real-time.">
+  <meta name="author" content="Pietro Atzeni">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b1120">
+  <link rel="canonical" href="https://beoboo.github.io/it/">
+  <link rel="alternate" hreflang="en" href="https://beoboo.github.io/">
+  <link rel="alternate" hreflang="it" href="https://beoboo.github.io/it/">
+  <link rel="alternate" hreflang="x-default" href="https://beoboo.github.io/">
+
+  <!-- Social preview -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://beoboo.github.io/it/">
+  <meta property="og:title" content="Pietro Atzeni — Senior Software Engineer &amp; Architect">
+  <meta property="og:description" content="Oltre 20 anni tra gaming, fintech e telecomunicazioni. Rust, C/C++ e sistemi distribuiti in tempo reale. Base a Cagliari.">
+  <meta property="og:site_name" content="Pietro Atzeni">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:image" content="https://beoboo.github.io/assets/og-card.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pietro Atzeni, Senior Software Engineer &amp; Architect, Cagliari, Italia">
+  <meta property="profile:first_name" content="Pietro">
+  <meta property="profile:last_name" content="Atzeni">
+  <meta property="profile:username" content="beoboo">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://beoboo.github.io/#website",
+        "url": "https://beoboo.github.io/",
+        "name": "Pietro Atzeni",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ProfilePage",
+        "url": "https://beoboo.github.io/it/",
+        "inLanguage": "it",
+        "name": "Pietro Atzeni — Senior Software Engineer & Architect",
+        "isPartOf": { "@id": "https://beoboo.github.io/#website" },
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://beoboo.github.io/#person",
+          "name": "Pietro Atzeni",
+          "url": "https://beoboo.github.io/",
+          "image": "https://avatars.githubusercontent.com/u/210002?v=4",
+          "jobTitle": "Senior Software Engineer & Architect",
+          "worksFor": { "@type": "Organization", "name": "Sophya Inc." },
+          "address": { "@type": "PostalAddress", "addressLocality": "Cagliari", "addressCountry": "IT" },
+          "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Cagliari", "sameAs": "https://www.unica.it/" },
+          "knowsAbout": ["Rust", "C", "C++", "Distributed real-time systems", "Game engines", "WebAssembly", "Software architecture", "CI/CD"],
+          "knowsLanguage": ["it", "en"],
+          "sameAs": ["https://github.com/beoboo", "https://www.linkedin.com/in/pietrinoatzeni/"]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Icons: SVG for browsers, ICO for crawlers, PNG for iOS home screens -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://avatars.githubusercontent.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body id="top">
+  <!-- Icons used more than once, drawn once -->
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Pietro Atzeni, torna all'inizio">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span class="brand-name">Pietro Atzeni</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Principale">
+        <ul>
+          <li><a href="#about">Chi sono</a></li>
+          <li><a href="#experience">Esperienza</a></li>
+          <li><a href="#skills">Competenze</a></li>
+          <li><a href="#projects">Progetti</a></li>
+          <li><a href="#education">Formazione</a></li>
+        </ul>
+      </nav>
+
+      <nav class="lang-switch" aria-label="Lingua">
+        <ul role="list">
+          <li><a href="/" hreflang="en" lang="en">EN<span class="visually-hidden"> – English</span></a></li>
+          <li><a href="/it/" hreflang="it" lang="it" aria-current="page">IT<span class="visually-hidden"> – Italiano</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="Introduzione">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Cagliari, Italia
+          </p>
+
+          <h1 class="hero-title">Pietro Atzeni</h1>
+          <p class="hero-role">Senior Software Engineer &amp; Architect</p>
+          <p class="hero-lede">
+            Progetto e sviluppo sistemi distribuiti in tempo reale, con oltre 20 anni
+            tra gaming, fintech e telecomunicazioni: dalle piattaforme VoIP al motore
+            di gioco Rust/WebAssembly che sviluppo in Sophya.
+          </p>
+
+          <ul class="contact-links" role="list" aria-label="Contatti">
+            <li>
+              <a class="btn btn-primary" href="https://www.linkedin.com/in/pietrinoatzeni/" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn<span class="visually-hidden">  (si apre in una nuova scheda)</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn btn-ghost" href="https://github.com/beoboo" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                GitHub<span class="visually-hidden">  (si apre in una nuova scheda)</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn btn-ghost" href="https://www.linkedin.com/in/pietrinoatzeni/" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                Richiedi il mio CV<span class="visually-hidden"> su LinkedIn (si apre in una nuova scheda)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- The GitHub profile picture at full size, loaded from GitHub so the site follows it -->
+        <div class="hero-portrait">
+          <div class="portrait">
+            <div class="portrait-frame">
+              <img src="https://avatars.githubusercontent.com/u/210002?v=4&amp;s=460" width="460" height="460" alt="Ritratto in pixel art di Pietro Atzeni" fetchpriority="high" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 01 · ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container section-grid">
+        <header class="section-head">
+          <p class="section-index">01</p>
+          <h2 id="about-title">Chi sono</h2>
+        </header>
+
+        <div class="section-body">
+          <div class="prose">
+            <p class="lead">
+              Sono un senior software engineer e architect con oltre 20 anni di
+              esperienza tra gaming, fintech e telecomunicazioni.
+            </p>
+            <p>
+              Le mie competenze principali sono Rust, C/C++ e i sistemi distribuiti in
+              tempo reale. Ho guidato team di ingegneria come CTO e come fondatore,
+              progettando architetture scalabili e pipeline CI/CD e facendo da mentore a
+              team ad alte prestazioni.
+            </p>
+            <p>
+              Tengo al codice pulito, ai test, all'automazione e all'open source. Nel tempo
+              libero sto scrivendo un libro su come costruire da zero un emulatore NES in
+              Rust, e sviluppo gli strumenti che uso per studiare musica. Lontano dalla
+              tastiera suono pianoforte e chitarra, dipingo e disegno.
+            </p>
+          </div>
+
+          <dl class="facts">
+            <div>
+              <dt>Esperienza</dt>
+              <dd>Oltre 20 anni, di cui 3 come CTO</dd>
+            </div>
+            <div>
+              <dt>Competenze</dt>
+              <dd>Rust, C/C++, sistemi distribuiti in tempo reale</dd>
+            </div>
+            <div>
+              <dt>Settori</dt>
+              <dd>Gaming, fintech, telecomunicazioni</dd>
+            </div>
+            <div>
+              <dt>Lingue</dt>
+              <dd>Italiano (madrelingua), inglese (C1)</dd>
+            </div>
+            <div>
+              <dt>Formazione</dt>
+              <dd>Ingegneria Elettronica, 110/110 e lode</dd>
+            </div>
+            <div>
+              <dt>Brevetto</dt>
+              <dd>US 11,273,358, concesso nel 2022</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 · EXPERIENCE ============ -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container section-grid">
+        <header class="section-head">
+          <p class="section-index">02</p>
+          <h2 id="experience-title">Esperienza</h2>
+        </header>
+
+        <div class="section-body">
+          <ol class="timeline" role="list">
+            <li class="timeline-item is-current">
+              <div class="timeline-content">
+                <h3 class="timeline-role">Game Engine Engineer <span class="timeline-org">Sophya Inc. · Boston, Stati Uniti (da remoto, da Cagliari)</span></h3>
+                <p class="timeline-date"><time datetime="2022-05">2022</time> – oggi</p>
+                <ul class="timeline-points">
+                  <li>Sviluppo, mantengo e miglioro un motore di gioco basato su Rust/WebAssembly/OpenGL.</li>
+                  <li>Estendo e miglioro la pipeline CI/CD.</li>
+                  <li>Ho creato un'infrastruttura di test completamente automatizzata per il motore di gioco.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-content">
+                <h3 class="timeline-role">Senior Software Developer &amp; Tech Lead <span class="timeline-org">Moneyfarm (sede italiana) · Milano, Italia</span></h3>
+                <p class="timeline-date"><time datetime="2017-05">2017</time> – <time datetime="2022-04">2022</time></p>
+                <p class="timeline-desc">
+                  Senior developer e tech lead per un'importante società di trading italiana.
+                </p>
+                <ul class="timeline-points">
+                  <li>Ho introdotto l'automazione dei test: behaviour-driven development e consumer-driven contract.</li>
+                  <li>Infrastructure as code con AWS, Terraform, Docker, Concourse, Kubernetes e GitLab.</li>
+                  <li>Progettazione architetturale dell'ecosistema di microservizi dell'azienda.</li>
+                  <li>Sviluppo di strumenti per l'automazione di rilasci e test.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-content">
+                <h3 class="timeline-role">Fondatore e CTO <span class="timeline-org">Di-SiDE s.r.l. · Sestu, Italia</span></h3>
+                <p class="timeline-date"><time datetime="2011-03">2011</time> – <time datetime="2020-12">2020</time></p>
+                <p class="timeline-desc">
+                  Direzione esecutiva e tecnica: sviluppo e supervisione della progettazione e
+                  dello sviluppo di applicazioni web e mobile.
+                </p>
+                <ul class="timeline-points">
+                  <li>Creazione di team tecnici, architetture software complesse e specifiche tecniche per gare d'appalto.</li>
+                  <li>Progettazione di interfacce utente (UX e UI).</li>
+                  <li>Piattaforme di business intelligence e motori di ricerca distribuiti.</li>
+                  <li>Sistemi di pagamento multipiattaforma.</li>
+                  <li>Sviluppo embedded su Raspberry Pi e Arduino.</li>
+                  <li>Pipeline e piattaforme CI/CD (Hudson, Jenkins).</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-content">
+                <h3 class="timeline-role">Senior Software Developer <span class="timeline-org">PRG Travel · Londra, Regno Unito</span></h3>
+                <p class="timeline-date"><time datetime="2010-03">mar</time> – <time datetime="2010-10">ott 2010</time></p>
+                <p class="timeline-desc">
+                  Direzione tecnica per Hotelplayer.com: progettazione e sviluppo di una
+                  piattaforma web per la distribuzione di servizi software agli hotel.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-content">
+                <h3 class="timeline-role">CTO <span class="timeline-org">SCI s.r.l. · Cagliari, Italia</span></h3>
+                <p class="timeline-date"><time datetime="2008-05">2008</time> – <time datetime="2010-03">2010</time></p>
+                <p class="timeline-desc">
+                  Direzione tecnica per MondiDinamici con un team di 20 ingegneri e
+                  6 designer. Project management, progettazione e sviluppo di una piattaforma
+                  di servizi su mondi virtuali 3D, inclusa l'implementazione del motore 3D.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-content">
+                <h3 class="timeline-role">CTO <span class="timeline-org">Abbeynet S.p.A. · Sestu, Italia</span></h3>
+                <p class="timeline-date"><time datetime="2006-01">2006</time> – <time datetime="2008-03">2008</time></p>
+                <p class="timeline-desc">
+                  Direzione tecnica della divisione Mplay: triple e quadruple play per
+                  piattaforme IPTV e VoIP, creazione del team e project management.
+                  Architetture di servizi distribuiti in C++ e C#.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-content">
+                <h3 class="timeline-role">Chief Software Architect <span class="timeline-org">Abbeynet S.p.A. · Sestu, Italia</span></h3>
+                <p class="timeline-date"><time datetime="2000-06">2000</time> – <time datetime="2006-01">2006</time></p>
+                <p class="timeline-desc">
+                  Progettazione e implementazione di piattaforme VoIP, gestione del team e
+                  mentoring. Architetture distribuite C/C++ su Windows e Linux, piattaforme
+                  real-time scalabili basate su eventi e librerie C++ per multi-threading e
+                  networking.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-content">
+                <h3 class="timeline-role">Software Developer <span class="timeline-org">Demetra s.r.l. · Elmas, Italia</span></h3>
+                <p class="timeline-date"><time datetime="2000-06">2000</time> – <time datetime="2001-02">2001</time></p>
+                <p class="timeline-desc">
+                  Sviluppo della piattaforma VoIP Chocophone (C++, MFC, Windows).
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 · SKILLS ============ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container section-grid">
+        <header class="section-head">
+          <p class="section-index">03</p>
+          <h2 id="skills-title">Competenze</h2>
+        </header>
+
+        <div class="section-body">
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3>Programmazione</h3>
+              <ul class="pills" role="list">
+                <li class="pill--strong">Rust<span class="visually-hidden">  (competenza principale)</span></li>
+                <li class="pill--strong">C/C++<span class="visually-hidden">  (competenza principale)</span></li>
+                <li>Python</li>
+                <li>Go</li>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>Dart</li>
+                <li>PHP</li>
+                <li>Ruby</li>
+                <li>SQL</li>
+                <li>Bash</li>
+                <li>HTML e CSS</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3>Progettazione software</h3>
+              <ul class="pills" role="list">
+                <li class="pill--strong">Sistemi distribuiti in tempo reale<span class="visually-hidden">  (competenza principale)</span></li>
+                <li>Architettura event-driven</li>
+                <li>Multithreading</li>
+                <li>Microservizi</li>
+                <li>Clean architecture</li>
+                <li>Domain-driven design</li>
+                <li>Test-first</li>
+                <li>Contract-driven testing</li>
+                <li>API REST</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3>CI/CD e DevOps</h3>
+              <ul class="pills" role="list">
+                <li>GitLab CI</li>
+                <li>GitHub Actions</li>
+                <li>Concourse</li>
+                <li>TeamCity</li>
+                <li>Jenkins</li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>Terraform</li>
+                <li>AWS</li>
+                <li>GCP</li>
+                <li>Azure</li>
+                <li>Git</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3>Framework e piattaforme</h3>
+              <ul class="pills" role="list">
+                <li>Bevy</li>
+                <li>WebAssembly</li>
+                <li>OpenGL</li>
+                <li>egui</li>
+                <li>Flutter</li>
+                <li>Firebase</li>
+                <li>Android</li>
+                <li>Symfony</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3>Leadership</h3>
+              <ul class="pills" role="list">
+                <li>Direzione tecnica</li>
+                <li>Creazione di team</li>
+                <li>Mentoring</li>
+                <li>Project management</li>
+                <li>Specifiche per gare d'appalto</li>
+                <li>Design UX e UI</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3>Lingue</h3>
+              <ul class="pills" role="list">
+                <li class="pill--strong">Italiano · Madrelingua</li>
+                <li>Inglese · C1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 · PROJECTS ============ -->
+    <section class="section section--tinted" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="section-index">04</p>
+            <h2 id="projects-title">Progetti</h2>
+          </div>
+          <p class="section-intro">
+            Progetti open source, un libro in corso, un'app di studio online e le
+            passioni di lunga data che mi tengono curioso lontano dalla tastiera.
+          </p>
+        </header>
+
+        <h3 class="group-title">Software</h3>
+        <div class="project-grid">
+
+          <!-- RustNES -->
+          <article class="project-card is-link">
+            <div class="project-thumb thumb-pixel" aria-hidden="true">
+              <svg viewBox="0 0 320 160">
+                <rect x="58" y="38" width="204" height="88" rx="10" fill="#c8d0de"/>
+                <rect x="70" y="50" width="180" height="64" rx="4" fill="#1a2236"/>
+                <rect x="103" y="64" width="14" height="36" rx="2" fill="#0b0f19"/>
+                <rect x="92" y="75" width="36" height="14" rx="2" fill="#0b0f19"/>
+                <rect x="140" y="60" width="40" height="4" fill="#7d8aa3"/>
+                <rect x="140" y="68" width="40" height="4" fill="#7d8aa3"/>
+                <rect x="141" y="90" width="16" height="6" rx="3" fill="#5f6b82"/>
+                <rect x="163" y="90" width="16" height="6" rx="3" fill="#5f6b82"/>
+                <circle cx="204" cy="88" r="10" fill="#ff8a4c"/>
+                <circle cx="230" cy="88" r="10" fill="#ff8a4c"/>
+              </svg>
+              <span class="project-badge">
+                <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M6 12h4M8 10v4"/><circle cx="15.5" cy="12" r=".6"/><circle cx="18.5" cy="12" r=".6"/></svg>
+              </span>
+            </div>
+            <div class="project-body">
+              <p class="project-cat">Emulatore · Rust</p>
+              <h4 class="project-title"><a id="p-rustnes" aria-labelledby="p-rustnes m-rustnes" href="https://github.com/beoboo/rustnes" target="_blank" rel="noopener noreferrer">RustNES</a></h4>
+              <p class="project-desc">
+                Un emulatore NES costruito per essere osservato mentre funziona: un debugger
+                a pannelli agganciabili ispeziona CPU, PPU, memoria, DMA e audio in tempo
+                reale mentre il gioco gira. Supera nestest (8.991/8.991) e le suite di test
+                CPU, PPU e APU di blargg.
+              </p>
+              <ul class="tags" role="list" aria-label="Tag">
+                <li>CPU 6502</li>
+                <li>5 mapper</li>
+                <li>Debugger egui</li>
+              </ul>
+              <span class="project-more" id="m-rustnes">
+                Vedi su GitHub
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <span class="visually-hidden">  (si apre in una nuova scheda)</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- graybox -->
+          <article class="project-card is-link">
+            <div class="project-thumb thumb-terminal" aria-hidden="true">
+<pre class="code-art"><span class="ln"><span class="k">$</span> git checkout ch15</span><span class="ln"><span class="k">$</span> cargo test</span><span class="ln"><span class="f">test result: ok.</span></span><span class="ln"><span class="k">$</span> cargo run roms/Chase.nes</span><span class="ln"><span class="c"># a title screen, at last</span></span></pre>
+              <span class="project-badge">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </span>
+            </div>
+            <div class="project-body">
+              <p class="project-cat">Codice del libro · Rust</p>
+              <h4 class="project-title"><a id="p-graybox" aria-labelledby="p-graybox m-graybox" href="https://github.com/beoboo/graybox" target="_blank" rel="noopener noreferrer">graybox</a></h4>
+              <p class="project-desc">
+                Il codice che accompagna la Parte I di un libro che sto scrivendo su come
+                costruire da zero un emulatore NES in Rust. Ogni tag git è il codice alla
+                fine di un capitolo, e ogni tag compila e supera i suoi test.
+              </p>
+              <ul class="tags" role="list" aria-label="Tag">
+                <li>Scrittura</li>
+                <li>Test-driven</li>
+              </ul>
+              <span class="project-more" id="m-graybox">
+                Vedi su GitHub
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <span class="visually-hidden">  (si apre in una nuova scheda)</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Music Practice Tracker (private repo, public app) -->
+          <article class="project-card is-link">
+            <div class="project-thumb thumb-chart" aria-hidden="true">
+              <svg viewBox="0 0 320 160" preserveAspectRatio="xMidYMax slice">
+                <rect x="44" y="18" width="232" height="160" rx="10" fill="#17223b" stroke="#2a3a5c"/>
+                <rect x="60" y="32" width="70" height="6" rx="3" fill="#c9d4e6"/>
+                <rect x="60" y="43" width="44" height="4" rx="2" fill="#4a5b7d"/>
+                <rect x="222" y="30" width="38" height="14" rx="7" fill="#192c48"/>
+                <path d="M64 76H258" stroke="#ff8a4c" stroke-width="1.2" stroke-dasharray="4 4" opacity=".7"/>
+                <rect x="70"  y="98"  width="16" height="34" rx="3" fill="#2b4a78"/>
+                <rect x="97"  y="84"  width="16" height="48" rx="3" fill="#2b4a78"/>
+                <rect x="124" y="106" width="16" height="26" rx="3" fill="#2b4a78"/>
+                <rect x="151" y="72"  width="16" height="60" rx="3" fill="#ff8a4c"/>
+                <rect x="178" y="90"  width="16" height="42" rx="3" fill="#2b4a78"/>
+                <rect x="205" y="64"  width="16" height="68" rx="3" fill="#ff8a4c"/>
+                <rect x="232" y="94"  width="16" height="38" rx="3" fill="#2b4a78"/>
+                <path d="M64 132H258" stroke="#2a3a5c"/>
+              </svg>
+              <span class="project-badge">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              </span>
+            </div>
+            <div class="project-body">
+              <p class="project-cat">App web · Flutter</p>
+              <h4 class="project-title"><a id="p-tracker" aria-labelledby="p-tracker m-tracker" href="https://music-tracker-data.web.app/" target="_blank" rel="noopener noreferrer">Music Practice Tracker</a></h4>
+              <p class="project-desc">
+                Un'app che ho creato per il mio studio: ricorda com'è andata l'ultima sessione
+                e pianifica la successiva, da quali passaggi suonare a quanto veloce e cosa
+                ascoltare. Aumenta la velocità a piccoli passi, con un metronomo che conosce
+                il brano e flashcard degli accordi.
+              </p>
+              <ul class="tags" role="list" aria-label="Tag">
+                <li>Firebase</li>
+                <li>Inglese e italiano</li>
+              </ul>
+              <span class="project-more" id="m-tracker">
+                Apri l'app
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <span class="visually-hidden">  (si apre in una nuova scheda)</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- munote -->
+          <article class="project-card is-link">
+            <div class="project-thumb thumb-staff" aria-hidden="true">
+              <svg viewBox="0 0 320 160" preserveAspectRatio="xMidYMid slice">
+                <g stroke="#52627f" stroke-width="1.2">
+                  <path d="M30 50H290M30 60H290M30 70H290M30 80H290M30 90H290"/>
+                  <path d="M30 50V90M190 50V90M290 50V90" stroke-width="1.6"/>
+                </g>
+                <g fill="#d5deec">
+                  <ellipse cx="70"  cy="85" rx="6" ry="4.4" transform="rotate(-20 70 85)"/>
+                  <ellipse cx="96"  cy="75" rx="6" ry="4.4" transform="rotate(-20 96 75)"/>
+                  <ellipse cx="124" cy="70" rx="6" ry="4.4" transform="rotate(-20 124 70)"/>
+                  <ellipse cx="150" cy="60" rx="6" ry="4.4" transform="rotate(-20 150 60)"/>
+                  <ellipse cx="216" cy="80" rx="6" ry="4.4" transform="rotate(-20 216 80)"/>
+                  <ellipse cx="242" cy="70" rx="6" ry="4.4" transform="rotate(-20 242 70)"/>
+                </g>
+                <ellipse cx="170" cy="65" rx="6" ry="4.4" transform="rotate(-20 170 65)" fill="#ff8a4c"/>
+                <ellipse cx="268" cy="55" rx="6" ry="4.4" transform="rotate(-20 268 55)" fill="#ff8a4c"/>
+                <g stroke="#d5deec" stroke-width="1.4">
+                  <path d="M75.5 84V54M101.5 74V44M129.5 69V39M155.5 59V29"/>
+                  <path d="M221.5 79V49M247.5 69V39"/>
+                </g>
+                <path d="M175.5 64V29M273.5 54V22" stroke="#ff8a4c" stroke-width="1.4"/>
+                <path d="M75 53L102 43V48L75 58Z M129 38L156 28V33L129 43Z M221 48L248 38V43L221 53Z" fill="#d5deec"/>
+              </svg>
+              <span class="project-badge">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              </span>
+            </div>
+            <div class="project-body">
+              <p class="project-cat">Libreria · Rust</p>
+              <h4 class="project-title"><a id="p-munote" aria-labelledby="p-munote m-munote" href="https://github.com/beoboo/munote" target="_blank" rel="noopener noreferrer">munote</a></h4>
+              <p class="project-desc">
+                Una libreria di notazione musicale in Rust: un parser nom per la GUIDO Music
+                Notation, con un primo prototipo egui che disegna una breve partitura e la
+                suona via MIDI.
+              </p>
+              <ul class="tags" role="list" aria-label="Tag">
+                <li>Notazione GUIDO</li>
+                <li>egui</li>
+                <li>MIDI</li>
+              </ul>
+              <span class="project-more" id="m-munote">
+                Vedi su GitHub
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <span class="visually-hidden">  (si apre in una nuova scheda)</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- RuScheme -->
+          <article class="project-card is-link">
+            <div class="project-thumb thumb-code" aria-hidden="true">
+<pre class="code-art code-art--numbered"><span class="ln"><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="f">fact</span> n<span class="p">)</span></span><span class="ln">  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="f">=</span> n <span class="n">0</span><span class="p">)</span></span><span class="ln">      <span class="n">1</span></span><span class="ln">      <span class="p">(</span><span class="f">*</span> n <span class="p">(</span><span class="f">fact</span> <span class="p">(</span><span class="f">-</span> n <span class="n">1</span><span class="p">)))))</span></span><span class="ln"><span class="p">(</span><span class="f">fact</span> <span class="n">20</span><span class="p">)</span></span><span class="ln"><span class="c">; =&gt; 2432902008176640000</span></span></pre>
+              <span class="project-badge">
+                <svg class="icon" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              </span>
+            </div>
+            <div class="project-body">
+              <p class="project-cat">Interprete · Rust</p>
+              <h4 class="project-title"><a id="p-ruscheme" aria-labelledby="p-ruscheme m-ruscheme" href="https://github.com/beoboo/ruscheme" target="_blank" rel="noopener noreferrer">RuScheme</a></h4>
+              <p class="project-desc">
+                Un interprete e compilatore in stile Scheme scritto in Rust, ispirato a
+                <em lang="en">Crafting Interpreters</em> e <em lang="en">SICP</em>. Ho imparato
+                entrambi i linguaggi mentre lo costruivo.
+              </p>
+              <ul class="tags" role="list" aria-label="Tag">
+                <li>LISP</li>
+                <li>Compilatori</li>
+              </ul>
+              <span class="project-more" id="m-ruscheme">
+                Vedi su GitHub
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <span class="visually-hidden">  (si apre in una nuova scheda)</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Invox -->
+          <article class="project-card is-link">
+            <div class="project-thumb thumb-doc" aria-hidden="true">
+              <svg viewBox="0 0 320 160" preserveAspectRatio="xMidYMin slice">
+                <rect x="112" y="14" width="120" height="170" rx="3" fill="#131d33" stroke="#2c3d60" transform="rotate(6 172 100)"/>
+                <rect x="100" y="18" width="120" height="170" rx="3" fill="#17223b" stroke="#2c3d60"/>
+                <rect x="112" y="30" width="30" height="10" rx="2" fill="#ff8a4c"/>
+                <rect x="170" y="30" width="38" height="4" rx="2" fill="#4a5b7d"/>
+                <rect x="180" y="38" width="28" height="4" rx="2" fill="#4a5b7d"/>
+                <rect x="112" y="54" width="62" height="4" rx="2" fill="#34466b"/>
+                <rect x="112" y="62" width="44" height="4" rx="2" fill="#34466b"/>
+                <rect x="112" y="78" width="96" height="9" rx="2" fill="#1f2d4a"/>
+                <rect x="112" y="95" width="52" height="4" rx="2" fill="#34466b"/>
+                <rect x="190" y="95" width="18" height="4" rx="2" fill="#34466b"/>
+                <rect x="112" y="105" width="40" height="4" rx="2" fill="#34466b"/>
+                <rect x="190" y="105" width="18" height="4" rx="2" fill="#34466b"/>
+                <rect x="112" y="115" width="58" height="4" rx="2" fill="#34466b"/>
+                <rect x="190" y="115" width="18" height="4" rx="2" fill="#34466b"/>
+                <path d="M112 127h96" stroke="#34466b"/>
+                <rect x="166" y="133" width="42" height="10" rx="2" fill="#ff8a4c"/>
+              </svg>
+              <span class="project-badge">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+              </span>
+            </div>
+            <div class="project-body">
+              <p class="project-cat">App web · PHP · Di-SiDE</p>
+              <h4 class="project-title"><a id="p-invox" aria-labelledby="p-invox m-invox" href="https://github.com/disider/invox" target="_blank" rel="noopener noreferrer">Invox</a></h4>
+              <p class="project-desc">
+                Realizzata con il mio team in Di-SiDE: un'app web PHP/Symfony per le attività
+                amministrative e commerciali di più aziende, con test di accettazione Behat.
+              </p>
+              <ul class="tags" role="list" aria-label="Tag">
+                <li>Symfony</li>
+                <li>Behat</li>
+                <li>Strumenti aziendali</li>
+              </ul>
+              <span class="project-more" id="m-invox">
+                Vedi su GitHub
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <span class="visually-hidden">  (si apre in una nuova scheda)</span>
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="group-title">Anche su GitHub</h3>
+        <ul class="repo-list" role="list">
+          <li>
+            <a href="https://github.com/beoboo/transactions-engine-demo" target="_blank" rel="noopener noreferrer">
+              <span class="repo-head"><span class="repo-name">transactions-engine-demo</span><span class="repo-lang"><span class="lang-dot" style="--lang:#dea584"></span>Rust</span></span>
+              <span class="repo-desc">Un motore di transazioni realizzato come vetrina di Rust: trasforma un CSV di transazioni nei saldi dei conti, e un motore esteso mostra come i dati dei conti potrebbero essere messi in cache o esternalizzati.</span><span class="visually-hidden">  (si apre in una nuova scheda)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/beoboo/job-scheduler-library" target="_blank" rel="noopener noreferrer">
+              <span class="repo-head"><span class="repo-name">job-scheduler-library</span><span class="repo-lang"><span class="lang-dot" style="--lang:#00add8"></span>Go</span></span>
+              <span class="repo-desc">Una libreria per avviare, fermare e monitorare job come processi figli eseguiti sotto i cgroup di Linux.</span><span class="visually-hidden">  (si apre in una nuova scheda)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/beoboo/monkey-rust" target="_blank" rel="noopener noreferrer">
+              <span class="repo-head"><span class="repo-name">monkey-rust</span><span class="repo-lang"><span class="lang-dot" style="--lang:#dea584"></span>Rust</span></span>
+              <span class="repo-desc">Il linguaggio Monkey di <em lang="en">Writing an Interpreter in Go</em>, riscritto in Rust insieme a una versione in Go.</span><span class="visually-hidden">  (si apre in una nuova scheda)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/beoboo/bevy-pong" target="_blank" rel="noopener noreferrer">
+              <span class="repo-head"><span class="repo-name">bevy-pong</span><span class="repo-lang"><span class="lang-dot" style="--lang:#dea584"></span>Rust</span></span>
+              <span class="repo-desc">Il classico Pong, realizzato con il motore di gioco Bevy.</span><span class="visually-hidden">  (si apre in una nuova scheda)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/beoboo?tab=repositories" target="_blank" rel="noopener noreferrer">
+              <span class="repo-head"><span class="repo-name">Tutti i repository</span><span class="repo-lang">C · Java · Rust</span></span>
+              <span class="repo-desc">Compresi i libri che ho studiato costruendone gli esempi: <em lang="en">Crafting Interpreters</em> (clox, jlox), <em lang="en">Writing an OS in Rust</em>, <em lang="en">Zero to Production in Rust</em> e tutorial sulle VM per linguaggi (2022).</span><span class="visually-hidden">  (si apre in una nuova scheda)</span>
+            </a>
+          </li>
+        </ul>
+
+        <h3 class="group-title">Oltre il codice</h3>
+        <div class="project-grid">
+
+          <article class="project-card">
+            <!-- To use a photo: <div class="project-thumb"><img src="assets/piano.jpg" alt=""></div> -->
+            <div class="project-thumb thumb-piano" aria-hidden="true">
+              <span class="project-badge">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              </span>
+            </div>
+            <div class="project-body">
+              <p class="project-cat">Musica</p>
+              <h4 class="project-title">Repertorio pianistico classico</h4>
+              <p class="project-desc">
+                Suono pianoforte e chitarra e studio teoria musicale, tra repertorio classico,
+                pop e improvvisazione jazz, e ho suonato dal vivo con piccole band locali.
+              </p>
+              <ul class="tags" role="list" aria-label="Tag">
+                <li>Pianoforte</li>
+                <li>Chitarra</li>
+                <li>Improvvisazione jazz</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb thumb-sketch" aria-hidden="true">
+              <svg class="sketch-art" viewBox="0 0 320 160" preserveAspectRatio="xMidYMax slice">
+                <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="262" cy="30" r="12" opacity=".45"/>
+                  <path d="M0 148H320"/>
+                  <rect x="14" y="78" width="40" height="70"/>
+                  <rect x="62" y="40" width="34" height="108"/>
+                  <path d="M70 40V28h18v12"/>
+                  <rect x="104" y="92" width="44" height="56"/>
+                  <path d="M104 92l22-22 22 22"/>
+                  <rect x="190" y="58" width="38" height="90"/>
+                  <rect x="236" y="100" width="44" height="48"/>
+                  <rect x="288" y="70" width="30" height="78"/>
+                  <path opacity=".55" d="M22 90h8m8 0h8M22 104h8m8 0h8M22 118h8m8 0h8M70 54h6m6 0h6M70 68h6m6 0h6M70 82h6m6 0h6M70 96h6m6 0h6M198 72h8m8 0h6M198 88h8m8 0h6M198 104h8m8 0h6"/>
+                  <path opacity=".35" d="M108 144l10-10M114 144l10-10M120 144l10-10M126 144l10-10M240 144l10-10M246 144l10-10M252 144l10-10M292 144l10-10M298 144l10-10"/>
+                  <circle cx="162" cy="115" r="5"/>
+                  <path d="M162 120v16m0 0l-5 12m5-12l5 12m-12-21l7-4 7 4"/>
+                </g>
+                <g fill="none" stroke="#ff8a4c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="177" cy="119" r="4.4"/>
+                  <path d="M177 123.5V138m0 0l-4 10m4-10l4 10m-10-17l6-4 6 3"/>
+                </g>
+              </svg>
+              <span class="project-badge">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+              </span>
+            </div>
+            <div class="project-body">
+              <p class="project-cat">Arti visive</p>
+              <h4 class="project-title">Schizzi di personaggi urbani</h4>
+              <p class="project-desc">
+                Disegno e faccio schizzi a matita per allenare osservazione e creatività, e
+                dipingo a olio e acrilico, esplorando tecniche a strati e il colore.
+              </p>
+              <ul class="tags" role="list" aria-label="Tag">
+                <li>Matita</li>
+                <li>Olio</li>
+                <li>Acrilico</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 · EDUCATION & PATENTS ============ -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container section-grid">
+        <header class="section-head">
+          <p class="section-index">05</p>
+          <h2 id="education-title">Formazione e brevetto</h2>
+        </header>
+
+        <div class="section-body">
+          <ol class="timeline" role="list">
+            <li class="timeline-item">
+              <div class="timeline-content">
+                <h3 class="timeline-role">Corso di lingua e grammatica inglese (60 ore) <span class="timeline-org">Anglo American Center · Cagliari, Italia</span></h3>
+                <p class="timeline-date"><time datetime="2006-01">2006</time></p>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-content">
+                <h3 class="timeline-role">Laurea in Ingegneria Elettronica <span class="timeline-org">Università di Cagliari · Cagliari, Italia</span></h3>
+                <p class="timeline-date"><time datetime="1992">1992</time> – <time datetime="2000-06-14">2000</time></p>
+                <p class="timeline-desc">
+                  Voto finale 110/110 e lode. Tesi: <em>Studio e realizzazione di un sistema
+                  di comunicazione digitale mediante tecniche di progettazione a livello di
+                  sistema.</em>
+                </p>
+                <ul class="tags" role="list" aria-label="Ambiti di studio">
+                  <li>Microelettronica</li>
+                  <li>Campi elettromagnetici</li>
+                  <li>Comunicazioni elettriche</li>
+                  <li>Sistemi di telecomunicazione</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-content">
+                <h3 class="timeline-role">Diploma di maturità scientifica <span class="timeline-org">Liceo Scientifico “A. Pacinotti” · Cagliari, Italia</span></h3>
+                <p class="timeline-date"><time datetime="1987">1987</time> – <time datetime="1993">1993</time></p>
+              </div>
+            </li>
+          </ol>
+
+          <article class="callout" aria-labelledby="patent-title">
+            <span class="callout-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </span>
+            <div>
+              <p class="callout-label">Brevetto USA 11,273,358 · Concesso nel 2022</p>
+              <h3 id="patent-title" lang="en">Method and system for transmitting audio signals to exercise machines of a training class</h3>
+              <p class="callout-desc">
+                Un'unità di controllo, accessibile all'istruttore che gestisce una classe di
+                allenamento, trasmette segnali audio alle macchine da esercizio della
+                classe. Lavoro correlato: una libreria audio Android multi-thread in tempo
+                reale per riprodurre e registrare musica e voce.
+                <a href="https://patents.google.com/patent/US11273358B2/en" target="_blank" rel="noopener noreferrer">Scheda pubblica su Google Patents<span class="visually-hidden">  (si apre in una nuova scheda)</span></a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Pietro Atzeni. Tutti i diritti riservati.</p>
+      <p>Cagliari, Italia<span class="footer-top"> · <a href="#top">Torna su ↑</a></span></p>
+    </div>
+  </footer>
+</body>
+</html>
